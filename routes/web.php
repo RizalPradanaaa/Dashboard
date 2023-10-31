@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\IndexController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', [IndexController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index']);
+
+Route::get('/data', [DashboardController::class, 'index']);
